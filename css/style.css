@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "iransans";
+  src: url(../fonts/IRANSansWeb.woff) format("woff");
+}
+
+@font-face {
+  font-family: "fontAwesome";
+  src: url(../fonts/fontawesome-webfont.woff) format("woff");
+}
+
+body {
+  font-family: "iransans" !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-logo {
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+.text-banner {
+  font-size: 3vh;
+  text-align: center;
+  font-weight: 900;
+  color: #769549;
+  margin-top: 15px;
+}
+.text-banner-second {
+  font-size: 2.5vh;
+  text-align: center;
+  font-weight: 800;
+  color: #769549;
+  margin-bottom: 15px;
+}
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+  --first-color: #1a73e8;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Roboto", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+/*===== FORM =====*/
+.l-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin-top: 50px;
+}
+.jj{
+  position: relative;
+    height: 100vh;
+    background-image: url("../images/baner_edit.jpg");
+    background-size: cover;
+    overflow: auto
+}
+.form {
+  width: 360px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  background: white;
+}
+.form__div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+  direction: rtl;
+}
+.form__label {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0 0.25rem;
+  background-color: #fff;
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+  direction: rtl;
+}
+.form__button {
+  display: block;
+  margin-right: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: #769549;
+  color: #fff;
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: -webkit-fill-available;
+}
+.form__button:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+/*Input focus move up label*/
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  right: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -0.5rem;
+  right: 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus*/
+.form__input:focus {
+  border: 1.5px solid var(--first-color);
+}
+.title {
+  color: #62baaa;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-container{
+  font-size: 20px;
+  color:#424040;
+}
+.icon{
+  width: 27px;
+  margin-left: 10px;
+}
+.text-group{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.runner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.end-text{
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  background: #43b7aa;
+  border-radius: 5px;
+  padding:10px;
+}
+.doc{
+  text-align: center;
+  margin-top: 60px;
+ 
+  
+}
+.text-doc{
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+.icon-doc{
+  width: 145px;
+}
+.fit{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+@media (max-width: 370px) { 
+  .set{
+    font-size: 12px !important;
+    font-weight: 900;
+  }
+  .text-group{
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .fit{
+    width: 100%;
+  }
+  .runner{
+    width: 100%;
+  }
+ }
+
+ @media (max-width:1399px){
+   .text-container{
+     font-size: 16px !important;
+   }
+ }
+ @media(max-width:1198px){
+   .set{
+     font-size: 13px;
+   }
+ }
