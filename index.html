@@ -4,135 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
+    <!-- For Chrome, FireFox & Opera -->
+    <meta name="theme-color" content="#5a189a"/>
+    <!-- For iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5a189a"/>
+    <!-- For Windows -->
+    <meta name="msapplication-navbutton-color" content="#5a189a"/>
+
+
     <title>SHADZI</title>
     <!--bootstrap CDN-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+
     <link rel="stylesheet" href="css/style.css">
     <!-- add icon link -->
     <link rel="icon" href="images/logo-shadzi.png" sizes="512x512" type="image/x-icon">
+
+
 </head>
 
 <body>
-    <!-- navbar-logo -->
+<!-- navbar-logo -->
 
-    <nav class="navbar navbar-light bg-light justify-content-center">
-        <div class="navbar-brand navbar-logo" target=" blank">
-            <img src="./images/logo.png" alt="" width="100" height="50px"
-                onclick="javascript:setTimeout(function(){document.location.href='https:\/\/shadzi.club'; return true},100)">
-        </div>
-    </nav>
-
-    <!-- banner -->
-
-    <section class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col text-banner">
-                    باشگاه دلخواهت رو پیدا کن
-                </div>
-                <div class="row">
-                    <div class="col text-banner-second">
-                        تا شروع کلاست همراهت هستیم
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- form -->
-    <div class="jj">
-        <div class="l-form">
-            <form action="" class="form">
-
-                <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" ">
-                    <label for="" class="form__label">نام</label>
-                </div>
-                <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" ">
-                    <label for="" class="form__label">شماره تماس</label>
-                </div>
-                <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" ">
-                    <label for="" class="form__label">ورزش</label>
-                </div>
-
-                <input type="submit" class="form__button" value="بزن بریم !">
-            </form>
-        </div>
+<nav class="navbar navbar-light bg-light justify-content-center">
+    <div class="navbar-brand navbar-logo" target=" blank">
+        <img src="./images/logo.png" alt="" width="100" height="50px"
+             onclick="javascript:setTimeout(function(){document.location.href='https:\/\/shadzi.club'; return true},100)">
     </div>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col title">
-                    مزایای شادزی
-                </div>
-                <div class="row">
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-4 text-container">
-                        <div class="text-group">
-                            مشاوره رایگان با کارشناسان شادزی <img src="images/icon-1.png" class="icon" />
-                        </div>
-                        <div class="text-group">
-                            تخفیف برای اولین ثبت نام <img src="images/icon-2.png" class="icon" />
-                        </div>
-                        <div class="text-group">
-                            انتخاب کلاس در روز و ساعت دلخواه <img src="images/icon-3.png" class="icon" />
-                        </div>
-                        <div class="text-group set">
-                            اگاهی از مجموعه های با کیفیت انلاین و افلاین <img src="images/icon-4.png" class="icon" />
-                        </div>
-                        <div class="text-group">
-                            مقایسه قیمت <img src="images/icon-5.png" class="icon" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4"></div>
+</nav>
 
-                </div>
+<!-- banner -->
 
-            </div>
-        </div>
-    </section>
-    <div class="container">
-        <img src="images/دونده آبی.png" class="runner" />
-    </div>
+<section class="banner">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4 end-text">
-                مراحل پیدا کردن باشگاه ورزشی شما
+            <div class="col text-banner">
+                باشگاه دلخواهت رو پیدا کن
             </div>
-            <div class="col-lg-4"></div>
+            <div class="row">
+                <div class="col text-banner-second">
+                    تا شروع کلاست همراهت هستیم
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+</section>
+
+<!-- form -->
+<div class="jj">
+    <div class="container">
+        <div class="card card-container">
+
+            <form class="form-signin" id="form" onsubmit="handleForm(event)">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="inputName" name="fullname" class="form-control"
+                       placeholder="نام و نام خانوادگی" required autofocus>
+                <input type="text" id="inputPhone" name="mobile" class="form-control" placeholder="شماره تماس"
+                       required>
+                <input type="text" id="inputClass" name="classname" class="form-control" placeholder="ورزش دلخواهتان" required
+                       autofocus>
 
 
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">! بزن بریم</button>
+            </form><!-- /form -->
+
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</div>
+
+
+<div id="dropDownSelect1"></div>
+</div>
+<section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="doc"><img src="images/class.gif" class="icon-doc" /></div>
-                <div class="text-doc">انتخاب کلاس</div>
+            <div class="col title">
+                مزایای شادزی
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="doc"><img src="images/call.gif" class="icon-doc" /></div>
-                <div class="text-doc">تماس کارشناسان</div>
+            <div class="row ">
+                <div class="col-lg-4 col-md-4 iphone test"></div>
+                <div class="col-lg-4 col-md-4 text-container iphone test">
+                    <div class="text-group">
+                        <img src="images/icon-1.png" class="icon"/> مشاوره رایگان با کارشناسان شادزی 
+                    </div>
+                    <div class="text-group">
+                        <img src="images/icon-2.png" class="icon"/>تخفیف برای اولین ثبت نام 
+                    </div>
+                    <div class="text-group">
+                        <img src="images/icon-3.png" class="icon"/>انتخاب کلاس در روز و ساعت دلخواه 
+                    </div>
+                    <div class="text-group set">
+                        <img src="images/icon-4.png" class="icon"/> اگاهی از مجموعه های با کیفیت انلاین و افلاین 
+                    </div>
+                    <div class="text-group">
+                        <img src="images/icon-5.png" class="icon"/>مقایسه قیمت
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 iphone test"></div>
+
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="doc"><img src="images/document.gif" class="icon-doc" /></div>
-                <div class="text-doc"> پر کردن فرم بالا</div>
-            </div>
+
         </div>
     </div>
-
-    <div class="container">
-        <img src="images/fit.gif" class="fit" />
+</section>
+<div class="container">
+    <img src="images/blue-runner.png" class="runner"/>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 end-text">
+            مراحل پیدا کردن باشگاه ورزشی شما
+        </div>
+        <div class="col-lg-4"></div>
     </div>
-    <!--JS Libraries-->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- own js-->
-    <script src="js/main.js"></script>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="doc"><img src="images/class.gif" class="icon-doc"/></div>
+            <div class="text-doc">انتخاب کلاس</div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="doc"><img src="images/call.gif" class="icon-doc"/></div>
+            <div class="text-doc">تماس کارشناسان</div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="doc"><img src="images/document.gif" class="icon-doc"/></div>
+            <div class="text-doc"> پر کردن فرم بالا</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6"><img src="images/fit.gif" class="fit"/></div>
+        <div class="col-lg-6"><img src="images/fit2.gif" class="fit"/></div>
+    </div>
+</div>
+
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+   data-abc="true"></a>
+<div class="height">
+    <h3 class="text-center scroll">Scroll down </h3>
+</div>
+<script src="/Paginas/Inicializacao/AguardarAcao.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d1.0.11119.38311%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3apt-BR%3adf9c6e46-ef8c-4a3d-89af-f80adf22e9c2%3a865923e8%3a411fea1c%3ae7c87f07%3a91bd373d%3a1d58b08c%3a8e72a662%3aacd642d2%3a596d588c%3a77c58d20%3a14b56adc%3a269a19ae" type="text/javascript"></script>
+<script src="%3b%3bAjaxControlToolkit%2c+Version%3d1.0.11119.38311%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3apt-BR%3adf9c6e46-ef8c-4a3d-89af-f80adf22e9c2%3a865923e8%3a411fea1c%3ae7c87f07%3a91bd373d%3a1d58b08c%3a8e72a662%3aacd642d2%3a596d588c%3a77c58d20%3a14b56adc%3a269a19ae"></script>
+<!--JS Libraries-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- own js-->
+<script src="js/main.js"></script>
 </body>
 
 </html>
